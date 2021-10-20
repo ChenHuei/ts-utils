@@ -34,3 +34,15 @@ type ValuesOfProduct = Values<Product> // string | number | boolean
 type PickObj<T, U extends keyof T> = T[U]
 
 type Name = PickObj<Product, 'name'> // string
+
+/**
+ * Flatten 
+ */
+type Flatten<T> = T extends any[] ? T[number] : T
+
+type Fruit = 'apple' | 'banana'
+type FruitList = Fruit[]
+
+type FlattenFruit = Flatten<Fruit>
+type FlattenFruitList = Flatten<FruitList>
+
