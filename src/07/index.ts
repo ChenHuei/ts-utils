@@ -17,8 +17,8 @@ let two: OrNull<number> = null
 two = 2 
 
 /**
-  * OneOrMany
-  */
+ * OneOrMany
+ */
 type OneOrMany<T> = T | T[];
 let category: OneOrMany<string> = 'cloth'
 category = ['cloth', 'other']
