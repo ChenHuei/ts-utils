@@ -19,4 +19,5 @@ enum MANUFACTURE {
   GOOGLE = 'google',
   SONY = 'sony',
 }
-type Manufacture = `${MANUFACTURE}`; // "apple" | "samsung" | "google" | "sony"
+type ManufactureValue = `${MANUFACTURE}`; // "apple" | "samsung" | "google" | "sony"
+type ManufactureKey = keyof typeof MANUFACTURE;
