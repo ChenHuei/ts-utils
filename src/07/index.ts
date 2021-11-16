@@ -43,3 +43,13 @@ type ValuesOfProduct = Values<Product> // string | number | boolean
 type PickObj<T, U extends keyof T> = T[U]
 
 type Name = PickObj<Product, 'name'> // string
+
+/** PickRename */
+type PickRename<T, K extends keyof T, R extends PropertyKey> = Omit<T, K> & { [P in R]: T[K] };
+
+const renameProduct: PickRename<Product, 'name', 'rename'> = {
+  rename: '',
+  description: '',
+  quantity: 0,
+  isDisabled: false
+}
